@@ -103,7 +103,7 @@ class Student {
   }
 
   addMark(mark, subject) {
-    if (!(1 < mark || mark < 5)) {
+    if (!(1 <= mark && mark <= 5)) {
       return "ошибка";
     }
     const findSubject = this.marks.find((s) => s.name === subject);
